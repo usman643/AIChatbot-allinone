@@ -14,8 +14,10 @@ struct ChatTextBoxView: View {
     
     @State private var text: String = ""
     @State private var textHeight: CGFloat = 60
-    private let maxHeight: CGFloat = 150
+    private let maxHeight: CGFloat = 120
     @State private var attachments : [URL] = []
+    @StateObject private var recognizer = SpeechRecognizer()
+    @State private var isSpeakerPlaying = false
     
     var sendMessageDidTapped : ((_ message:String, _ attachments:[URL]?) -> Void)?
     
@@ -62,18 +64,27 @@ struct ChatTextBoxView: View {
                 }
                 
                 Circle()
-                    .fill(Color.appGray)
+                    .fill(self.isSpeakerPlaying ? Color.red : Color.appGray)
                     .frame(width: 35, height: 35)
                     .overlay(
                         Image(systemName: "person.wave.2.fill")
                     )
+                    .onTapGesture {
+                        if isSpeakerPlaying {
+                            isSpeakerPlaying = false
+                            recognizer.stopTranscribing()
+                        }else{
+                            isSpeakerPlaying = true
+                            try? recognizer.startTranscribing()
+                        }
+                    }
                 
             }
             .foregroundStyle(Color.botPrimaryLight)
             .padding(.horizontal, 25)
             
             
-            VStack(alignment: .leading) {
+            VStack(alignment: .leading, spacing: 0) {
                 if attachments.count > 0 {
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 8) {
@@ -84,7 +95,7 @@ struct ChatTextBoxView: View {
                                         .resizable()
                                         .scaledToFill()
                                         .background(Color.gray.opacity(0.1))
-                                        .frame(width: 60, height: 60)
+                                        .frame(width: 50, height: 50)
                                         .clipShape(RoundedRectangle(cornerRadius: 8))
                                         .overlay {
                                             ZStack(alignment: .topTrailing) {
@@ -101,7 +112,7 @@ struct ChatTextBoxView: View {
                             }
                         }
                         .padding(.horizontal)
-                        .frame(height: 70, alignment: .leading)
+                        .frame(height: 55, alignment: .leading)
                     }
                 }
                 
@@ -126,9 +137,12 @@ struct ChatTextBoxView: View {
                             .onChange(of: text, {
                                 adjustTextHeight()
                             })
+                            .onChange(of: recognizer.transcribedText, {
+                                self.text = self.recognizer.transcribedText
+                            })
                         
                         Button {
-                            if !text.isEmpty && (messageState != .inProgress || messageState != .typingState) {
+                            if (!text.isEmpty || attachments.count > 0) && (messageState != .inProgress || messageState != .typingState) {
                                 //send call back for textMessage
                                 self.sendMessage()
                             }

@@ -19,5 +19,9 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>We need access to your microphone to transcribe your voice in chat</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>We need access to recognize your speech</string>
 </dict>
 </plist>

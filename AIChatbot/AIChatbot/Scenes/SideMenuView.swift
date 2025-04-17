@@ -10,6 +10,7 @@ import SwiftUI
 enum ChatMenuOptions {
     case aiChat
     case aiArt
+    case explore
     
     func getMenuTitle()->String{
         switch self {
@@ -17,6 +18,8 @@ enum ChatMenuOptions {
             return "AI Chat Model"
         case .aiArt:
             return "AI Art Generator"
+        case .explore:
+            return "Explore AI Tools"
         }
     }
     
@@ -26,6 +29,8 @@ enum ChatMenuOptions {
             return "menuChatIcon"
         case .aiArt:
             return "menuArtIcon"
+        case .explore:
+            return "exploreAI"
         }
     }
 }
@@ -37,99 +42,107 @@ struct SideMenuView: View {
     @AppStorage("isDarkMode") private var isDarkMode = false
     
     @Binding var selectedMenu : ChatMenuOptions
-    let menuOptions : [ChatMenuOptions] = [.aiChat, .aiArt]
-    
+    let menuOptions : [ChatMenuOptions] = [.aiChat, .aiArt, .explore]
+    @State var showUpgradePro: Bool = false
 //    var menuDidTapped : (ChatMenuOptions)-> Void = {_ in }
     var upgradeProDidTapped : ()-> Void = { }
     
     var body: some View {
-        
-        VStack(alignment: .leading, spacing: 30) {
-            HStack {
-                Text("AI Chatbot")
-                    .font(.boldFont(32))
-                    .foregroundStyle(Color.botPrimaryLight)
-                Spacer()
-                Image("menuIcon")
-                    .foregroundStyle(Color.botPrimaryLight)
-            }
-            .padding(.horizontal, 25)
-            
-            
-            VStack(spacing:5) {
-                ForEach(menuOptions, id: \.self) { menuOption in
-                    Rectangle()
-                        .fill(Color.red.opacity(0.001))
-                        .frame(height: 50)
-                        .overlay {
-                            SideMenuContentView(menuOption: .constant(menuOption) , selectedMenu: $selectedMenu)
-                        }
-                        .onTapGesture {
-                            selectedMenu = menuOption
-//                            menuDidTapped(menuOption)
-                        }
-                }
-            }
-            .padding(.horizontal, 25)
-            
-            Spacer()
-            
-            VStack(alignment: .leading, spacing: 15) {
-                Text("Additional Settings")
-                    .font(.regularFont(18))
-                    .foregroundColor(.gray)
-                
+        NavigationStack {
+            VStack(alignment: .leading, spacing: 30) {
                 HStack {
-                    Text("Dark Mode")
+                    Text("AI Chatbot")
+                        .font(.boldFont(32))
+                        .foregroundStyle(Color.botPrimaryLight)
+                    Spacer()
+                    Image("menuIcon")
+                        .foregroundStyle(Color.botPrimaryLight)
+                }
+                .padding(.horizontal, 25)
+                
+                
+                VStack(spacing:5) {
+                    ForEach(menuOptions, id: \.self) { menuOption in
+                        Rectangle()
+                            .fill(Color.red.opacity(0.001))
+                            .frame(height: 50)
+                            .overlay {
+                                SideMenuContentView(menuOption: .constant(menuOption) , selectedMenu: $selectedMenu)
+                            }
+                            .onTapGesture {
+                                selectedMenu = menuOption
+    //                            menuDidTapped(menuOption)
+                            }
+                    }
+                }
+                .padding(.horizontal, 25)
+                
+                Spacer()
+                
+                VStack(alignment: .leading, spacing: 15) {
+                    Text("Additional Settings")
+                        .font(.regularFont(18))
+                        .foregroundColor(.gray)
+                    
+                    HStack {
+                        Text("Dark Mode")
+                            .font(.regularFont(18))
+                            .foregroundStyle(Color.botPrimaryLight)
+                        
+                        Spacer()
+                        
+                        Toggle("", isOn: $isDarkMode)
+                            .toggleStyle(.switch)
+                            .tint(Color.botPrimaryLight)
+                            .onChange(of: isDarkMode) {
+                                let newTheme: ColorScheme? = (colorScheme == .dark) ? .light : .dark
+                                NSApp.appearance = newTheme == .dark ? NSAppearance(named: .darkAqua) : NSAppearance(named: .aqua)
+                            }
+                            
+                        
+                    }
+                    
+                    Text("Privacy Policy")
                         .font(.regularFont(18))
                         .foregroundStyle(Color.botPrimaryLight)
+                        .underline()
                     
-                    Spacer()
-                    
-                    Toggle("", isOn: $isDarkMode)
-                        .toggleStyle(.switch)
-                        .tint(Color.botPrimaryLight)
-                        .onChange(of: isDarkMode) {
-                            let newTheme: ColorScheme? = (colorScheme == .dark) ? .light : .dark
-                            NSApp.appearance = newTheme == .dark ? NSAppearance(named: .darkAqua) : NSAppearance(named: .aqua)
-                        }
-                        
+                    Text("Terms & Conditions")
+                        .font(.regularFont(18))
+                        .foregroundStyle(Color.botPrimaryLight)
+                        .underline()
                     
                 }
+                .padding(.horizontal, 25)
                 
-                Text("Privacy Policy")
-                    .font(.regularFont(18))
-                    .foregroundStyle(Color.botPrimaryLight)
-                    .underline()
                 
-                Text("Terms & Conditions")
-                    .font(.regularFont(18))
-                    .foregroundStyle(Color.botPrimaryLight)
-                    .underline()
+                VStack(alignment: .leading) {
+                    Image("upgradeProBanner")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .onTapGesture {
+                            self.showUpgradePro.toggle()
+//                            self.upgradeProDidTapped()
+                        }
+                }
+                .padding(.top, 25)
+                .frame(height: 143)
+                .frame(maxWidth: .infinity)
+                .background(Color.black)
+                .clipShape(RoundedRectangle(cornerRadius: 12))
+                .padding(.horizontal, 25)
+                .padding(.bottom, 30)
                 
             }
-            .padding(.horizontal, 25)
-            
-            
-            VStack(alignment: .leading) {
-                Image("upgradeProBanner")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .onTapGesture {
-                        self.upgradeProDidTapped()
-                    }
-            }
-            .padding(.top, 25)
-            .frame(height: 143)
-            .frame(maxWidth: .infinity)
-            .background(Color.black)
-            .clipShape(RoundedRectangle(cornerRadius: 12))
-            .padding(.horizontal, 25)
-            .padding(.bottom, 30)
-            
+            .padding(.top, 10)
+            .background(Color.botPrimary)
         }
-        .padding(.top, 10)
-        .background(Color.botPrimary)
+        .sheet(isPresented: $showUpgradePro) {
+            SubscriptionView()
+                .frame(maxWidth: .infinity)
+                .presentationBackground(.clear)
+        }
+        
         
     }
 }

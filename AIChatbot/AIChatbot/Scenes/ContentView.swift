@@ -9,38 +9,43 @@ import SwiftUI
 
 struct ContentView: View {
     @State var selectedMenuItem: ChatMenuOptions = .aiChat
+//    @State var showUpgradePro: Bool = false
     
-    @State var showUpgradePro: Bool = false
+    var chatViewModel: ChatViewModel = ChatViewModel()
     
     var body: some View {
-        NavigationStack {
-            ZStack {
-                Color.clear.ignoresSafeArea()
-                
-                HStack(spacing:1) {
-                    SideMenuView(selectedMenu: $selectedMenuItem, upgradeProDidTapped: {
-                        self.showUpgradePro =  true
-                    })
-                    .frame(width: 300, alignment: .leading)
-                    .frame(maxHeight: .infinity)
-                    .background(Color.botPrimary)
-                    
-                    
-                    if selectedMenuItem == .aiChat {
-                        ChatContentView(viewModel: ChatViewModel())
-                    }else{
-                        ArtContentView()
-                    }
-                    
+        
+        HStack(spacing:1) {
+            SideMenuView(selectedMenu: $selectedMenuItem, upgradeProDidTapped: {
+//                    self.showUpgradePro =  true
+            })
+            .frame(width: 300, alignment: .leading)
+            .frame(maxHeight: .infinity)
+            .background(Color.botPrimary)
+            
+            
+            if selectedMenuItem == .aiChat {
+                ChatContentView(viewModel: chatViewModel)
+            }else if selectedMenuItem == .aiArt{
+                ArtContentView()
+            }else if selectedMenuItem == .explore{
+                NavigationStack {
+                    ExploreAIContentView()
                 }
-                
+
             }
+            
         }
-        .sheet(isPresented: $showUpgradePro) {
-            SubscriptionView()
-                .frame(maxWidth: .infinity)
-                .presentationBackground(.clear)
-        }
+        
+        
+//        NavigationStack {
+//            
+//        }
+//        .sheet(isPresented: $showUpgradePro) {
+//            SubscriptionView()
+//                .frame(maxWidth: .infinity)
+//                .presentationBackground(.clear)
+//        }
     }
 }
 

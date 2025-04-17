@@ -20,9 +20,7 @@ struct ChatListView: View {
             VStack {
                 
                 Button {
-                    self.chats.append(ChatModel(chatName: defaultChatName))
-                    self.changeSelectedIndex(self.chats.endIndex - 1)
-                    self.onNewAssistent()
+                    self.createNewAssistent()
                 } label: {
                     HStack(spacing: 20) {
                         Image("menuChatIcon")
@@ -62,6 +60,11 @@ struct ChatListView: View {
                                         } onDeleteTapped: {
                                             let selectedChat = chats[selectedIndex]
                                             chats.remove(at: index)
+                                            
+                                            if chats.count == 0 {
+                                                self.createNewAssistent()
+                                            }
+                                            
                                             if index == selectedIndex {
                                                 self.changeSelectedIndex(0)
                                             }else{
@@ -93,6 +96,12 @@ struct ChatListView: View {
             
             
         }
+    }
+    
+    private func createNewAssistent() {
+        self.chats.insert(ChatModel(chatName: defaultChatName), at: 0)
+        self.changeSelectedIndex(self.chats.startIndex)
+        self.onNewAssistent()
     }
     
     private func changeSelectedIndex(_ index: Int) {

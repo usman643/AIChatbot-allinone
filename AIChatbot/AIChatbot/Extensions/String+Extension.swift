@@ -38,3 +38,6 @@ extension String {
         synthesizer.speak(utterance)
     }
 }
+
+
+

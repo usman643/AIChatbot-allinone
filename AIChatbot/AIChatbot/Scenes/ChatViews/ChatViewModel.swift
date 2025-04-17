@@ -15,6 +15,10 @@ class ChatViewModel : ObservableObject {
         self.loadChatData()
     }
     
+    private func getDefaultChatModel() -> ChatModel {
+        return ChatModel(chatName: defaultChatName, messages: [])
+    }
+    
     func loadChatData() {
         let chatList = UserDefaults.standard.chatModelStorage ?? []
         if chatList.isEmpty {
@@ -31,10 +35,13 @@ class ChatViewModel : ObservableObject {
     func sendMessage(_ message: ChatMessageModel, completion: ((_ error:String?) -> Void)? = nil) {
 
         //save message
-        self.selectedChat.messages.append(message)
+        let selectedChat = self.selectedChat
+        
+        
+        selectedChat.messages.append(message)
         
         let emptyMessage = ChatMessageModel(text: "", isUserMessage: false, modelType: message.modelType, parentMessageId: message.id)
-        self.selectedChat.messages.append(emptyMessage)
+        selectedChat.messages.append(emptyMessage)
         
         self.saveUpdatedChat()
         
@@ -42,26 +49,26 @@ class ChatViewModel : ObservableObject {
         APIClient.shared.sendMessage(message: message) { response in
             switch response {
             case .success(let reply):
-                self.createResponse(queryMsg: message, respMessage: reply)
+                self.createResponse(queryMsg: message, selectedChat: selectedChat, respMessage: reply)
                 completion?(nil)
             case .failure(let error):
                 print(error)
-                self.createResponse(queryMsg: message, respMessage: "", hasError: true)
+                self.createResponse(queryMsg: message, selectedChat: selectedChat, respMessage: "", hasError: true)
                 completion?("Something went wrong, please try reloading the conversation.")
             }
         }
     }
     
     
-    private func createResponse(queryMsg:ChatMessageModel, respMessage: String, hasError: Bool = false) {
+    private func createResponse(queryMsg:ChatMessageModel, selectedChat:ChatModel, respMessage: String, hasError: Bool = false) {
         
         let message = ChatMessageModel(text: respMessage, isUserMessage: false, modelType: queryMsg.modelType, parentMessageId: queryMsg.id, hasError: hasError)
         
-        if let lastMsg = self.selectedChat.messages.last, lastMsg.text == "", lastMsg.isUserMessage == false{
-            self.selectedChat.messages.removeLast()
+        if let lastMsg = selectedChat.messages.last, lastMsg.text == "", lastMsg.isUserMessage == false{
+            selectedChat.messages.removeLast()
         }
         
-        self.selectedChat.messages.append(message)
+        selectedChat.messages.append(message)
         self.saveUpdatedChat()
     }
     
@@ -75,10 +82,23 @@ class ChatViewModel : ObservableObject {
         }
     }
     
+    func saveUpdatedChat(selectedChat: ChatModel) {
+        DispatchQueue.main.async {
+            let chats = self.chats
+            self.chats.removeAll()
+            self.chats = chats
+            UserDefaults.standard.chatModelStorage = self.chats
+        }
+    }
+    
     
     func clearCache() {
-        UserDefaults.standard.chatModelStorage = nil
-        self.chats.removeAll()
+        DispatchQueue.main.async {
+            self.chats.removeAll()
+            self.chats.insert(self.getDefaultChatModel(), at: 0)
+            self.selectedChat = self.chats.first!
+            UserDefaults.standard.chatModelStorage = self.chats
+        }
     }
     
     

@@ -33,8 +33,6 @@ class APIClient {
             body["attachments"] = base64Arr
         }
         
-        
-        
         do {
             request.httpBody = try JSONSerialization.data(withJSONObject: body)
         } catch {
@@ -77,5 +75,63 @@ class APIClient {
 
         task.resume()
     }
+    
+    
+    func generateImages(request:ImageRequestModel,
+                        completion: @escaping (Result<[String], Error>) -> Void) {
+        
+        guard let url = URL(string: Constants.gptImageCloudeBaseURL) else {
+            completion(.failure(NSError(domain: "Invalid URL", code: 400, userInfo: nil)))
+            return
+        }
+
+        guard let jsonData = try? JSONEncoder().encode(request) else {
+            completion(.failure(NSError(domain: "EncodingError", code: 0)))
+            return
+        }
+
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = jsonData
+        
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            DispatchQueue.main.async {
+                if let error = error {
+                    completion(.failure(error))
+                    return
+                }
+
+                guard let httpResponse = response as? HTTPURLResponse else {
+                    completion(.failure(NSError(domain: "Invalid Response", code: 500, userInfo: nil)))
+                    return
+                }
+
+                guard (200...299).contains(httpResponse.statusCode) else {
+                    completion(.failure(NSError(domain: "Server Error", code: httpResponse.statusCode, userInfo: nil)))
+                    return
+                }
+
+                guard let data = data else {
+                    completion(.failure(NSError(domain: "No Data Received", code: 500, userInfo: nil)))
+                    return
+                }
+
+                do {
+                    if let json = try JSONSerialization.jsonObject(with: data) as? [String: Any],
+                       let images = json["images"] as? [[String: Any]] {
+                        let urls = images.compactMap { $0["url"] as? String }
+                        completion(.success(urls))
+                    } else {
+                        completion(.failure(NSError(domain: "Invalid JSON Structure", code: 500, userInfo: nil)))
+                    }
+                } catch {
+                    completion(.failure(error))
+                }
+            }
+        }.resume()
+    }
+    
+    
 
 }

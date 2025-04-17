@@ -12,6 +12,7 @@ struct ChatBubbleView: View {
     @Binding var messageState: MessageState
     let message: ChatMessageModel
     var selectedFont: FontType = .px16
+    var recognizer : SpeechRecognizer
 
     @State private var displayedText = ""
     @State private var showToast = false
@@ -20,11 +21,19 @@ struct ChatBubbleView: View {
     
     var onEditMessage: ((ChatMessageModel) -> Void)?
     var onReGenerateMessage: ((ChatMessageModel) -> Void)?
+    var onTypingMessage: (() -> Void)?
     
     
     var body: some View {
         
         VStack(alignment: message.isUserMessage ? .trailing : .leading, spacing: 3) {
+            
+            if !message.isUserMessage {
+                Text("Powered by \(message.modelType.getModelTitle())")
+                    .font(.footnote)
+                    .foregroundStyle(Color.gray.opacity(0.7))
+            }
+            
             HStack {
                 if message.isUserMessage { Spacer() }
 
@@ -101,13 +110,19 @@ struct ChatBubbleView: View {
                             self.onReGenerateMessage?(message)
                         }
                         
-                        ChatBubbleButtonView(icon: "speaker.wave.2", hasSystemIcon: true) {
-                            if isSpeakerPlaying {
-                                ProcessUtils.shared.stopSpeaker()
-                                isSpeakerPlaying = false
+                        ChatBubbleButtonView(icon: "speaker.wave.2", hasSystemIcon: true, forgroundColor: recognizer.voicepPlayerId == message.id ? .red: .botPrimaryLight) {
+                            if recognizer.voicepPlayerId == message.id {
+                                recognizer.voicepPlayerId = ""
+                                recognizer.stopSpeaker()
                             }else{
-                                isSpeakerPlaying = true
-                                ProcessUtils.shared.speakText(message.text ?? "")
+                                recognizer.voicepPlayerId = message.id
+                                recognizer.speakText(message.text ?? "")
+                                recognizer.onFinishSpeech = {
+                                    DispatchQueue.main.async {
+                                        self.recognizer.voicepPlayerId = ""
+                                        self.recognizer.stopSpeaker()
+                                    }
+                                }
                             }
                             
                         }
@@ -115,6 +130,10 @@ struct ChatBubbleView: View {
                         ChatBubbleButtonView(icon: "shareIcon") {
                             self.message.text?.shareText()
                         }
+                        
+                        Spacer()
+                        
+                        
                         
                     }
                     
@@ -135,6 +154,11 @@ struct ChatBubbleView: View {
                 let char = message[message.index(message.startIndex, offsetBy: index)]
                 displayedText.append(char)
                 index += 1
+                
+                if char == "\n" {
+                    self.onTypingMessage?()
+                }
+                
             } else {
                 timer.invalidate()
                 messageState = .completed
@@ -152,7 +176,7 @@ struct ChatBubbleView: View {
 
 #Preview {
     
-    ChatBubbleView(messageState: .constant(.noState), message: ChatMessageModel(text: "Hi this is test message", isUserMessage: true, modelType: .chatGPT3_5))
+    ChatBubbleView(messageState: .constant(.noState), message: ChatMessageModel(text: "Hi this is test message", isUserMessage: true, modelType: .chatGPT3_5), recognizer: SpeechRecognizer())
         .frame(width: 600, height: 600)
 }
 
@@ -182,6 +206,7 @@ fileprivate struct ChatBubbleButtonView: View {
     
     let icon : String
     var hasSystemIcon : Bool = false
+    var forgroundColor : Color = .botPrimaryLight
     
     var onButtonPressed : (() -> Void)
     
@@ -194,13 +219,13 @@ fileprivate struct ChatBubbleButtonView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 16, height: 16)
-                    .foregroundStyle(Color.botPrimaryLight)
+                    .foregroundStyle(forgroundColor)
             }else{
                 Image(icon)
                     .resizable()
                     .scaledToFit()
                     .frame(width: 16, height: 16)
-                    .foregroundStyle(Color.botPrimaryLight)
+                    .foregroundStyle(forgroundColor)
             }
         }
         .buttonStyle(.plain)

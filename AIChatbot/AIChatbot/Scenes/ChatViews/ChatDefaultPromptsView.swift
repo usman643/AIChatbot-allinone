@@ -8,6 +8,16 @@
 import SwiftUI
 
 struct ChatDefaultPromptsView: View {
+    
+    let prompts: [String] = [
+        "Summarize this business idea like you're pitching to an investor in 30 seconds.",
+        "Write a professional email that sounds confident, clear, and polite.",
+        "Act like a genius inventor—what’s a wild new gadget the world needs?",
+        "Give me 3 fun facts that’ll blow my mind in under 10 seconds."
+    ]
+    
+    var onPromptSelected: ((String) -> Void)?
+    
     var body: some View {
         VStack(spacing:20) {
             Text("Hello!\nHow can I assist you today?")
@@ -17,16 +27,28 @@ struct ChatDefaultPromptsView: View {
             
             
             HStack(spacing: 20) {
-                PromtStackView(text: .constant("I am designing a web so, write a case study for this and provide the content for home Page"))
+                PromtStackView(text: prompts.first ?? "")
+                    .onTapGesture {
+                        onPromptSelected?(prompts.first ?? "")
+                    }
                 
-                PromtStackView(text: .constant("I am designing a web so, write a case study for this and provide the content for home Page"))
+                PromtStackView(text: prompts[1])
+                    .onTapGesture {
+                        onPromptSelected?(prompts[1])
+                    }
             }
             
             
             HStack(spacing: 20) {
-                PromtStackView(text: .constant("I am designing a web so, write a case study for this and provide the content for home Page"))
+                PromtStackView(text: prompts[2])
+                    .onTapGesture {
+                        onPromptSelected?(prompts[2])
+                    }
                 
-                PromtStackView(text: .constant("I am designing a web so, write a case study for this and provide the content for home Page"))
+                PromtStackView(text: prompts[3])
+                    .onTapGesture {
+                        onPromptSelected?(prompts[3])
+                    }
             }
             
             
@@ -42,7 +64,7 @@ struct ChatDefaultPromptsView: View {
 
 
 fileprivate struct PromtStackView : View {
-    @Binding var text: String
+    var text: String
     
     var body: some View {
         VStack {

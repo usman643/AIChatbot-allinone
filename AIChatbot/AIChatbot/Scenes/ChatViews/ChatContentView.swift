@@ -16,6 +16,8 @@ struct ChatContentView: View {
     @State var messageState : MessageState = .noState
     @State var promtMessage : ChatMessageModel?
     
+    @StateObject private var recognizer = SpeechRecognizer()
+    
     var body: some View {
         VStack(spacing: 0) {
             ChatHeaderView(headerSelection: [.modelSelection, .fontSelection, .exportChat, .shareChat], onModelSelection: { model in
@@ -38,7 +40,10 @@ struct ChatContentView: View {
                     .frame(width: 250)
 
                 if viewModel.selectedChat.messages.isEmpty {
-                    ChatDefaultPromptsView()
+                    ChatDefaultPromptsView(onPromptSelected: { text in
+                        let promtMsg = ChatMessageModel(text: text, isUserMessage: true, modelType: self.selectedChatModel)
+                        self.promtMessage = promtMsg
+                    })
 //                        .padding()
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                 }else {
@@ -46,36 +51,33 @@ struct ChatContentView: View {
                     ScrollViewReader { scrollViewProxy in
                         
                         ScrollView {
-                            VStack(spacing: 10) {
-                                ForEach(Array(viewModel.selectedChat.messages.enumerated()), id: \.element.id) { index, message in
+                            LazyVStack(spacing: 10) {
+                                ForEach(viewModel.selectedChat.messages, id: \.id) { message in
                                     
-                                    let isLastMessage = index == viewModel.selectedChat.messages.count - 1
+                                    let isLastMessage = message.id == viewModel.selectedChat.messages.last?.id
                                     
-                                    ChatBubbleView(messageState: (isLastMessage ? $messageState : .constant(.noState)), message: message, selectedFont: selectedFont, onEditMessage: { message in
+                                    ChatBubbleView(messageState: (isLastMessage ? $messageState : .constant(.noState)), message: message, selectedFont: selectedFont, recognizer:recognizer, onEditMessage: { message in
                                         self.promtMessage = message
                                     }, onReGenerateMessage:{ message in
                                         self.regenrateMessage(message: message)
+                                    }, onTypingMessage:{
+                                        
                                     })
                                     .id(message.id)
+                                    .padding(.top, message.isUserMessage == true ? 50 : 0)
+                                    
                                 }
+                                
                             }
                             .padding(.top, 20)
                             .onChange(of: viewModel.selectedChat.messages) {
-                                
-                                if let lastMessage = viewModel.selectedChat.messages.last {
-                                    if lastMessage.isUserMessage {
-                                        withAnimation {
-                                            scrollViewProxy.scrollTo(lastMessage.id, anchor: .bottom)
-                                        }
-                                    } else {
-                                        DispatchQueue.main.async {
-                                            withAnimation {
-                                                scrollViewProxy.scrollTo(lastMessage.id, anchor: .top)
-                                            }
-                                        }
-                                    }
-                                }
-                                
+                                self.scrollViewScrollsToBottom(scrollViewProxy: scrollViewProxy)
+                            }
+                        }
+                        .onAppear {
+                            self.scrollViewScrollsToBottom(scrollViewProxy: scrollViewProxy, allowAnimation: false)
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
+                                self.scrollViewScrollsToBottom(scrollViewProxy: scrollViewProxy, allowAnimation: false)
                             }
                         }
                         
@@ -88,13 +90,31 @@ struct ChatContentView: View {
             .padding(.bottom)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             
-            ChatTextBoxView(messageState:$messageState, selectedChatModelType: self.selectedChatModel, promtMessage: $promtMessage, sendMessageDidTapped: { message, attachments in
+            HStack(alignment:.bottom, spacing: 0) {
                 
-                self.sendMessage(message: message, attachments: attachments)
-            })
-            .padding(.bottom)
-            .padding(.horizontal, 40)
-            .padding(.leading, 120)
+                Button {
+                    viewModel.clearCache()
+                } label: {
+                    Text("Clear Chat")
+                        .font(.boldFont(16))
+                        .foregroundStyle(Color.botPrimaryLight)
+                        .frame(width: 220, height: 50)
+                        .background(Color.gray.opacity(0.2))
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                        .padding()
+                        .padding(.bottom, 5)
+                        .padding(.leading, 3)
+                        
+                }
+                .buttonStyle(.borderless)
+                ChatTextBoxView(messageState:$messageState, selectedChatModelType: self.selectedChatModel, promtMessage: $promtMessage, sendMessageDidTapped: { message, attachments in
+                    
+                    self.sendMessage(message: message, attachments: attachments)
+                })
+                .padding(.bottom)
+                .padding(.trailing, 10)
+            }
+            
             
         }
         .background(Color.chatbg)
@@ -103,6 +123,26 @@ struct ChatContentView: View {
         }
         .overlay {
             ToastView()
+        }
+    }
+    
+    private func scrollViewScrollsToBottom(scrollViewProxy: ScrollViewProxy, allowAnimation:Bool = true) {
+        if let lastMessage = viewModel.selectedChat.messages.last {
+            if lastMessage.isUserMessage {
+                withAnimation {
+                    scrollViewProxy.scrollTo(lastMessage.id, anchor: .bottom)
+                }
+            } else {
+                DispatchQueue.main.async {
+                    if allowAnimation {
+                        withAnimation {
+                            scrollViewProxy.scrollTo(lastMessage.id, anchor: .bottom)
+                        }
+                    }else{
+                        scrollViewProxy.scrollTo(lastMessage.id, anchor: .bottom)
+                    }
+                }
+            }
         }
     }
     

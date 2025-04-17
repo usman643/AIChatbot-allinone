@@ -12,7 +12,7 @@ struct AIChatbotApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .frame(minWidth: 1150, maxWidth: .infinity, minHeight: 800, maxHeight: .infinity)
+                .frame(minWidth: 1250, maxWidth: .infinity, minHeight: 820, maxHeight: .infinity)
                 
         }
     }
