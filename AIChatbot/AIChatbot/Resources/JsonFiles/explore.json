@@ -1,0 +1,1216 @@
+[
+    {
+        "category": "Content",
+        "subcategories": [
+            {
+                "toolIcon": "SummarizeIcon",
+                "toolTitle": "Summarize",
+                "toolSubtitle": "Quickly extract key points from content.",
+                "placeholderQuestion": "Input text for summarization.",
+                "actionButtonText": "Summarize",
+                "toolPrompt": "Summarize the following content:",
+                "systemInstruction": "Condense the given text into its most important points while maintaining clarity and essential meaning. Ensure the summary is concise and informative."
+            },
+            {
+                "toolIcon": "TranslateIcon",
+                "toolTitle": "Translate",
+                "toolSubtitle": "Convert text into any language effortlessly.",
+                "placeholderQuestion": "Enter text for translation.",
+                "actionButtonText": "Translate",
+                "toolPrompt": "Translate this text into",
+                "systemInstruction": "Generate an accurate translation of the provided text. Feel free to specify both the source and target languages as needed. You can also modify the complexity of the translation based on the required style or difficulty level."
+            },
+            {
+                "toolIcon": "GrammarCheckIcon",
+                "toolTitle": "Grammar Check",
+                "toolSubtitle": "Quickly verify and correct grammar.",
+                "placeholderQuestion": "Enter text for grammar check.",
+                "actionButtonText": "Check Grammar",
+                "toolPrompt": "Review the following text for grammar errors:",
+                "systemInstruction": "Analyze the provided text for grammatical errors, including sentence structure, verb agreement, punctuation, and overall coherence. Highlight any mistakes and suggest corrections to improve clarity and fluency. Ensure the final version is grammatically sound and reads smoothly. You may adjust the text length and complexity as needed."
+            },
+            {
+                "toolIcon": "EssayIcon",
+                "toolTitle": "Essay",
+                "toolSubtitle": "Create structured and compelling essays with ease.",
+                "placeholderQuestion": "Enter a topic to generate an essay.",
+                "actionButtonText": "Write",
+                "toolPrompt": "Write a comprehensive essay on the following topic:",
+                "systemInstruction": "Generate a well-organized essay that includes an engaging introduction, informative body paragraphs, and a strong conclusion. Ensure clarity, coherence, and logical flow throughout the content, making it both structured and compelling."
+            },
+            {
+                "toolIcon": "LetterIcon",
+                "toolTitle": "Letter",
+                "toolSubtitle": "Compose professional and customized letters.",
+                "placeholderQuestion": "Enter details to generate a letter.",
+                "actionButtonText": "Compose",
+                "toolPrompt": "Draft a well-structured letter using the following details:",
+                "systemInstruction": "Create a polished and purpose-driven letter based on the provided input. Ensure the tone aligns with the letter’s intent, maintaining clarity, professionalism, and coherence throughout."
+            },
+            {
+                "toolIcon": "EmailIcon",
+                "toolTitle": "Email",
+                "toolSubtitle": "Write clear and professional emails effortlessly.",
+                "placeholderQuestion": "Enter details to draft an email.",
+                "actionButtonText": "Write",
+                "toolPrompt": "Generate a well-structured email using the following details:",
+                "systemInstruction": "Compose a professional and concise email based on the given input. Ensure it includes a subject line, appropriate greeting, well-organized body, and a polished closing for clarity and effectiveness."
+            }
+            
+        ]
+    },
+    {
+        "category": "Learning and Education",
+        "subcategories": [
+            {
+                "toolIcon": "LanguageLearningIcon",
+                "toolTitle": "Language Learning",
+                "toolSubtitle": "Master a new language with a custom learning plan.",
+                "placeholderQuestion": "Type the language you want to begin learning.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Create a tailored language learning plan for the selected language.",
+                "systemInstruction": "Your goal is to outline a structured, day-by-day language learning schedule. Include specific objectives, practice activities, and essential phrases for the chosen language."
+            },
+            {
+                "toolIcon": "ScienceFactsIcon",
+                "toolTitle": "Science Facts",
+                "toolSubtitle": "Explore intriguing science facts.",
+                "placeholderQuestion": "Type a topic to uncover science facts.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Generate captivating and educational science facts about this topic:",
+                "systemInstruction": "Your task is to produce fascinating and informative science facts related to the given topic."
+            },
+            {
+                "toolIcon": "MathTricksIcon",
+                "toolTitle": "Math Tricks",
+                "toolSubtitle": "Master quick and simple math tricks.",
+                "placeholderQuestion": "Type a topic to discover math tricks.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Generate easy and effective math tricks for this topic:",
+                "systemInstruction": "Your task is to provide simple, fast, and easy-to-follow math tricks that enhance problem-solving efficiency."
+            },
+            {
+                "toolIcon": "HistoryFactsIcon",
+                "toolTitle": "History Facts",
+                "toolSubtitle": "Uncover intriguing history facts.",
+                "placeholderQuestion": "Type a topic to explore history facts.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Generate captivating and educational history facts about this topic:",
+                "systemInstruction": "Your task is to provide engaging and insightful facts about historical events or figures related to the given topic."
+            },
+            {
+                "toolIcon": "ArtHistoryIcon",
+                "toolTitle": "Art History",
+                "toolSubtitle": "Discover captivating facts about art history.",
+                "placeholderQuestion": "Type a topic to explore art history facts.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Generate insightful facts about art history related to this topic:",
+                "systemInstruction": "Your task is to uncover and share fascinating facts about the history of art, including significant artists, movements, and their impact."
+            },
+            {
+                "toolIcon": "ExamPreparationIcon",
+                "toolTitle": "Exam Preparation",
+                "toolSubtitle": "Discover effective strategies for exam success.",
+                "placeholderQuestion": "Type a subject to start preparing.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Generate practical and effective exam preparation tips for this subject:",
+                "systemInstruction": "Your task is to provide actionable study strategies, including structured study plans, key focus areas, and techniques to enhance retention and performance."
+            },
+            {
+                "toolIcon": "CareerGuidanceIcon",
+                "toolTitle": "Career Guidance",
+                "toolSubtitle": "Receive expert career guidance and insights.",
+                "placeholderQuestion": "Type a field to get career advice.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Generate tailored career guidance for this field:",
+                "systemInstruction": "Your task is to provide expert career advice specific to the chosen field, including strategies for skill development, networking, and growth opportunities."
+            },
+            {
+                "toolIcon": "ResearchTopicIcon",
+                "toolTitle": "Research Topic",
+                "toolSubtitle": "Discover compelling and relevant research paper ideas.",
+                "placeholderQuestion": "Enter your area of interest or a specific topic.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Generate thought-provoking and relevant research paper ideas based on this area of interest or topic:",
+                "systemInstruction": "Your task is to suggest engaging and well-structured research topics aligned with the user's field of study or area of interest. Ensure the topics are academically and professionally relevant, providing a strong foundation for further research and exploration."
+            }
+        ]
+    },
+    {
+        "category": "Business",
+        "subcategories": [
+            {
+                "toolIcon": "JobPostIcon",
+                "toolTitle": "Job Post",
+                "toolSubtitle": "Create clear and compelling job postings.",
+                "placeholderQuestion": "Enter job details to generate a job post.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Generate a clear and engaging job posting using these details:",
+                "systemInstruction": "Your task is to craft a well-structured and persuasive job post based on the provided details. Highlight the role, key responsibilities, and required qualifications to attract the right candidates."
+            },
+            {
+                "toolIcon": "CompanyBioIcon",
+                "toolTitle": "Company Bio",
+                "toolSubtitle": "Create a concise and compelling company bio.",
+                "placeholderQuestion": "Enter company details to generate a bio.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Generate a concise and professional company bio using these details:",
+                "systemInstruction": "Your task is to craft an engaging and professional company bio that effectively represents the company, its mission, and core values."
+            },
+            {
+                "toolIcon": "PromoteProductIcon",
+                "toolTitle": "Promote Product",
+                "toolSubtitle": "Create persuasive and impactful product promotions.",
+                "placeholderQuestion": "Enter product details to generate a promotion.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Generate a compelling promotional message for this product:",
+                "systemInstruction": "Your task is to craft an engaging and persuasive product promotion that highlights key features and benefits in a way that captivates potential customers."
+            },
+            {
+                "toolIcon": "WriteBusinessBioIcon",
+                "toolTitle": "Write Business Bio",
+                "toolSubtitle": "Generate a concise and professional business bio.",
+                "placeholderQuestion": "Enter business details to generate a bio.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Create a professional and engaging business bio using these details:",
+                "systemInstruction": "Your task is to craft a well-structured and compelling business bio that highlights the company's mission, achievements, and core values."
+            }
+        ]
+    },
+    {
+        "category": "Code",
+        "subcategories": [
+            {
+                "toolIcon": "WriteCodeIcon",
+                "toolTitle": "Write Code",
+                "toolSubtitle": "Generate clean, efficient, and functional code.",
+                "placeholderQuestion": "Enter requirements to generate code.",
+                "actionButtonText": "Write",
+                "toolPrompt": "Write clean, efficient, and well-structured code based on these requirements:",
+                "systemInstruction": "Your task is to generate clear, optimized, and functional code that meets the given requirements. Ensure readability, maintainability, and best coding practices."
+            },
+            {
+                "toolIcon": "ExplainCodeIcon",
+                "toolTitle": "Explain Code",
+                "toolSubtitle": "Get clear and concise code explanations.",
+                "placeholderQuestion": "Enter code to generate an explanation.",
+                "actionButtonText": "Explain",
+                "toolPrompt": "Analyze and explain the functionality of this code:",
+                "systemInstruction": "Your task is to break down and explain the provided code in a clear and concise manner. Focus on step-by-step functionality to enhance understanding."
+            },
+            {
+                "toolIcon": "FunctionWritingIcon",
+                "toolTitle": "Function Writing",
+                "toolSubtitle": "Generate custom functions for specific tasks.",
+                "placeholderQuestion": "Enter requirements to generate a function.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Write a custom function based on these requirements:",
+                "systemInstruction": "Your task is to create a well-structured and optimized function that meets the given requirements. Ensure efficiency, clarity, and proper functionality."
+            },
+            {
+                "toolIcon": "APIIntegrationScriptsIcon",
+                "toolTitle": "API Integration ]Scripts",
+                "toolSubtitle": "Create scripts for smooth API integration.",
+                "placeholderQuestion": "Enter API details to generate an integration script.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Generate a functional API integration script based on these details:",
+                "systemInstruction": "Your task is to create a secure, efficient, and easy-to-implement script that integrates with the specified API while ensuring seamless functionality."
+            },
+            {
+                "toolIcon": "CustomFrameworkCodeIcon",
+                "toolTitle": "Custom Framework Code",
+                "toolSubtitle": "Generate customized code for specific frameworks.",
+                "placeholderQuestion": "Enter framework details to generate code.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Generate compatible and optimized code for this custom framework:",
+                "systemInstruction": "Your task is to write framework-specific code that adheres to its standards, ensuring compatibility, efficiency, and seamless integration."
+            },
+            {
+                "toolIcon": "ErrorDetectionIcon",
+                "toolTitle": "Error Detection",
+                "toolSubtitle": "Detect and fix errors in your code.",
+                "placeholderQuestion": "Enter code to identify issues.",
+                "actionButtonText": "Analyze",
+                "toolPrompt": "Analyze this code to identify and resolve errors:",
+                "systemInstruction": "Your task is to examine the provided code, detect errors, and suggest effective fixes. Ensure your recommendations enhance functionality, reliability, and efficiency."
+            },
+            {
+                "toolIcon": "SyntaxCorrections",
+                "toolTitle": "Syntax Corrections",
+                "toolSubtitle": "Instantly correct syntax errors in your code.",
+                "placeholderQuestion": "Enter code to fix syntax issues.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Identify and fix syntax errors in this code:",
+                "systemInstruction": "Your task is to detect and correct syntax errors in the provided code. Ensure the revised code is properly structured, functional, and adheres to correct syntax rules."
+            }
+        ]
+    },
+    {
+        "category": "Personal Development",
+        "subcategories": [
+            {
+                "toolIcon": "CreateNewStoriesIcon",
+                "toolTitle": "Create New Stories",
+                "toolSubtitle": "Create captivating stories from scratch.",
+                "placeholderQuestion": "Generate the opening of a new story.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Begin a new story with an engaging and immersive opening:",
+                "systemInstruction": "Your task is to craft a compelling story introduction that draws readers in and sets the stage for an exciting narrative. You have full creative freedom to establish the genre, characters, and setting. Ensure the opening is intriguing, sparking curiosity and encouraging readers to continue. Introduce fascinating characters, describe a vivid scene, or present a thought-provoking situation that hooks the audience."
+            },
+            {
+                "toolIcon": "PersonalStylistIcon",
+                "toolTitle": "Personal Stylist",
+                "toolSubtitle": "Receive personalized fashion advice and style tips.",
+                "placeholderQuestion": "Describe your style preferences for tailored fashion tips.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Share details about your style preferences and fashion needs:",
+                "systemInstruction": "To receive customized fashion tips, describe your style preferences, body type, occasion, and any specific fashion concerns or goals. The more details you provide, the better I can help you curate a stylish, flattering, and confidence-boosting wardrobe."
+            },
+            {
+                "toolIcon": "SkinCareRoutineIcon",
+                "toolTitle": "Skin Care Routine",
+                "toolSubtitle": "Get a personalized skincare routine tailored to your needs.",
+                "placeholderQuestion": "Describe your skin type and skincare goals for a custom regimen.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Share details about your skin type and skincare goals:",
+                "systemInstruction": "To develop a customized skincare routine, describe your skin type (e.g., oily, dry, combination) and your specific skincare concerns (e.g., acne, aging, hydration). The more details you provide, the better I can recommend suitable products and routines to help you achieve healthy, glowing skin."
+            },
+            {
+                "toolIcon": "YogaPoseIcon",
+                "toolTitle": "Yoga Pose",
+                "toolSubtitle": "Get step-by-step instructions for yoga poses and workouts.",
+                "placeholderQuestion": "Select a yoga pose or workout to practice.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Follow detailed instructions for specific yoga poses or workouts:",
+                "systemInstruction": "Your task is to provide clear, step-by-step guidance on practicing yoga poses and workouts. Users can select a specific pose or routine, and you will guide them through proper form and technique. Help users experience the physical and mental benefits of yoga by offering easy-to-follow instructions for a safe and effective practice."
+            }
+        ]
+    },
+    {
+        "category": "Artist",
+        "subcategories": [
+            {
+                "toolIcon": "ShortMovieIcon",
+                "toolTitle": "Short Movie",
+                "toolSubtitle": "Generate captivating and well-structured short movie scripts.",
+                "placeholderQuestion": "Enter your idea to generate a short movie script.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Write a compelling short movie script based on this idea:",
+                "systemInstruction": "Your task is to craft a creative and engaging short movie script that brings the provided concept to life. Ensure the script has a strong narrative structure, well-developed characters, and a compelling storyline that captivates the audience."
+            },
+            {
+                "toolIcon": "PoemIcon",
+                "toolTitle": "Poem",
+                "toolSubtitle": "Create expressive and heartfelt poetry.",
+                "placeholderQuestion": "Enter a theme to generate a poem.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Write a meaningful and evocative poem based on this theme:",
+                "systemInstruction": "Your task is to craft a powerful and expressive poem that captures the essence of the given theme. Use vivid imagery, deep emotions, and poetic flow to create a compelling piece that resonates with the reader."
+            },
+            {
+                "toolIcon": "LyricsIcon",
+                "toolTitle": "Lyrics",
+                "toolSubtitle": "Create catchy and meaningful song lyrics.",
+                "placeholderQuestion": "Enter a theme to generate song lyrics.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Write engaging and rhythmic song lyrics based on this theme:",
+                "systemInstruction": "Your task is to craft compelling and memorable song lyrics that align with the given theme. Ensure the lyrics have a strong rhythmic flow, emotional depth, and a structure suitable for a song."
+            },
+            {
+                "toolIcon": "ScriptWritingIcon",
+                "toolTitle": "Script Writing Assistance",
+                "toolSubtitle": "Create well-structured scripts for any project.",
+                "placeholderQuestion": "Enter an idea to generate a script.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Write a script based on this idea:",
+                "systemInstruction": "Your task is to develop a structured and engaging script tailored to the given input. Ensure it aligns with the intended purpose and maintains a natural flow."
+            }
+        ]
+    },
+    {
+        "category": "Social",
+        "subcategories": [
+            {
+                "toolIcon": "ViralVideoIdeasIcon",
+                "toolTitle": "Viral Video Ideas",
+                "toolSubtitle": "Craft compelling and highly shareable video concepts.",
+                "placeholderQuestion": "Specify your niche to unlock viral-worthy ideas.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Generate attention-grabbing and viral video concepts centered around this niche:",
+                "systemInstruction": "Your role is to develop engaging and innovative video ideas tailored to the given niche. Prioritize elements that enhance virality, audience engagement, and social sharing potential."
+            },
+            {
+                "toolIcon": "TikTokCaptionIcon",
+                "toolTitle": "TikTok Caption",
+                "toolSubtitle": "Create captivating and scroll-stopping TikTok captions.",
+                "placeholderQuestion": "Enter your content to generate the perfect TikTok caption.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Generate a catchy, engaging TikTok caption for this content:",
+                "systemInstruction": "Your mission is to craft a lively, relatable, and attention-grabbing caption that resonates with TikTok’s dynamic audience, enhancing engagement and shareability."
+            },
+            {
+                "toolIcon": "InstagramCaptionsIcon",
+                "toolTitle": "Instagram Captions",
+                "toolSubtitle": "Craft vibrant and engaging Instagram captions.",
+                "placeholderQuestion": "Enter your content to generate the perfect Instagram caption.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Generate a captivating and engaging Instagram caption for this content:",
+                "systemInstruction": "Your goal is to create a lively, fun, and relevant caption that enhances the content’s appeal, encourages engagement, and resonates with the Instagram audience."
+            },
+            {
+                "toolIcon": "LinkedInPostIcon",
+                "toolTitle": "LinkedIn Post",
+                "toolSubtitle": "Craft compelling and professional LinkedIn posts.",
+                "placeholderQuestion": "Enter details to generate a powerful LinkedIn post.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Generate a polished and engaging LinkedIn post based on these details: ",
+                "systemInstruction": "Your mission is to create a well-structured, professional, and engaging LinkedIn post that aligns with the given details, enhances credibility, and fosters meaningful engagement."
+            },
+            {
+                "toolIcon": "TweetIcon",
+                "toolTitle": "Tweet",
+                "toolSubtitle": "Create sharp, engaging, and scroll-stopping tweets.",
+                "placeholderQuestion": "Enter text to generate a tweet.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Generate a compelling and attention-grabbing tweet based on this text: ",
+                "systemInstruction": "Your goal is to craft a concise, impactful, and engaging tweet that effectively conveys the essence of the provided content while maximizing engagement and shareability."
+            },
+            {
+                "toolIcon": "SocialMediaPostIcon",
+                "toolTitle": "Social Media Post",
+                "toolSubtitle": "Craft compelling and impactful social media posts.",
+                "placeholderQuestion": "Enter content to generate a social media post.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Generate an engaging and well-crafted social media post based on this content: ",
+                "systemInstruction": "Your mission is to create a captivating and informative social media post that effectively conveys the intended message, enhances engagement, and resonates with the audience."
+            }
+        ]
+    },
+    {
+        "category": "Easter",
+        "subcategories": [
+            {
+                "toolIcon": "StoryPromptsIcon",
+                "toolTitle": "Story Prompts",
+                "toolSubtitle": "Discover captivating and imaginative story prompts for any genre.",
+                "placeholderQuestion": "Enter a theme to generate a story prompt.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Generate intriguing and creative story prompts inspired by this theme:",
+                "systemInstruction": "Your goal is to craft thought-provoking and imaginative story prompts that align with the given theme, sparking creativity and fitting seamlessly within the chosen genre."
+            },
+            {
+                "toolIcon": "EasterCardIcon",
+                "toolTitle": "Easter Card",
+                "toolSubtitle": "Craft joyful and heartfelt messages for Easter cards.",
+                "placeholderQuestion": "Enter details to generate an Easter card message.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Compose a warm and festive Easter card message using these details:",
+                "systemInstruction": "Your mission is to create a cheerful and meaningful Easter card message that captures the spirit of the occasion, spreading warmth, joy, and celebration."
+            },
+            {
+                "toolIcon": "TriviaChallengeIcon",
+                "toolTitle": "Trivia Challenge",
+                "toolSubtitle": "Test knowledge with exciting and thought-provoking trivia on any topic.",
+                "placeholderQuestion": "Enter a topic to generate a trivia challenge.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Generate engaging and challenging trivia questions based on this topic:",
+                "systemInstruction": "Your goal is to craft fun, intriguing, and well-balanced trivia questions that entertain while stimulating curiosity. Ensure they are both enjoyable and thought-provoking."
+            },
+            {
+                "toolIcon": "EggHuntPlanningIcon",
+                "toolTitle": "EggHunt Planning",
+                "toolSubtitle": "Organize a thrilling and enjoyable Easter egg hunt.",
+                "placeholderQuestion": "Provide details to plan an egg hunt.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Design an exciting Easter egg hunt based on the provided details.",
+                "systemInstruction": "Your task is to create a lively and entertaining Easter egg hunt. Include imaginative themes, engaging activities, and fun challenges to make it a memorable experience for all participants."
+            },
+            {
+                "toolIcon": "BibleStoriesForKidsIcon",
+                "toolTitle": "Bible Stories For Kids",
+                "toolSubtitle": "Discover captivating and child-friendly Bible stories.",
+                "placeholderQuestion": "Enter a theme to explore Bible stories for children.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Suggest meaningful and engaging Bible stories for children based on this theme:",
+                "systemInstruction": "Your role is to share compelling and age-appropriate Bible stories that match the provided theme. Ensure they are easy to understand, relatable, and enjoyable for young readers."
+            }
+        ]
+    },
+    {
+        "category": "Food",
+        "subcategories": [
+            {
+                "toolIcon": "RecipeIcon",
+                "toolTitle": "Recipe",
+                "toolSubtitle": "Design entertaining and thought-provoking trivia quizzes.",
+                "placeholderQuestion": "Enter a topic to generate trivia questions.",
+                "actionButtonText": "Generate",
+                "toolPrompt": " Create an engaging trivia challenge based on the following topic:",
+                "systemInstruction": "Your task is to develop an exciting and well-structured trivia quiz. Include a mix of easy and challenging questions, along with interesting facts to enhance the experience."
+            },
+            {
+                "toolIcon": "DietPlanIcon",
+                "toolTitle": "Diet Plan",
+                "toolSubtitle": " Craft a customized and nourishing diet plan designed for your aspirations.",
+                "placeholderQuestion": "Share your goals to generate a tailored diet plan.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Develop a thoughtfully curated diet plan aligned with the following goals:",
+                "systemInstruction": "Your mission is to create a holistic and personalized diet plan that aligns with the given objectives. Ensure it is well-balanced, enriched with wholesome meal recommendations, and complemented by insightful nutritional guidance for a healthier lifestyle."
+            },
+            {
+                "toolIcon": "IntermittentFastingIcon",
+                "toolTitle": "Intermittent Fasting",
+                "toolSubtitle": "Design a personalized and effective intermittent fasting plan.",
+                "placeholderQuestion": "Provide your fasting schedule to generate a tailored plan.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Develop a structured intermittent fasting plan based on the following schedule:",
+                "systemInstruction": "Your mission is to create a well-balanced and sustainable intermittent fasting plan. Ensure it includes optimal meal timings, practical tips for success, and guidance on maintaining energy and nourishment throughout the fasting journey."
+            }
+        ]
+    },
+    {
+        "category": "Freelancers",
+        "subcategories": [
+            {
+                "toolIcon": "ProposalWriterIcon",
+                "toolTitle": "Proposal Writer",
+                "toolSubtitle": "AI crafts compelling proposal cover letters in seconds.",
+                "placeholderQuestion": "Enter the details for your proposal.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Instantly generate a persuasive proposal cover letter using the following details:",
+                "systemInstruction": "Your role is to create an engaging and impactful proposal cover letter tailored to a freelance project. Incorporate key details such as the project scope, client expectations, and any specific requirements to ensure a strong first impression. This tool streamlines the process, helping you present a polished and professional proposal effortlessly."
+            },
+            {
+                "toolIcon": "CustomKeywordAlertsIcon",
+                "toolTitle": "Custom Keyword Alerts",
+                "toolSubtitle": "Stay updated with job alerts tailored to your skills.",
+                "placeholderQuestion": "Enter your preferred keywords for job alerts.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Get freelance job alerts customized to your expertise by entering relevant keywords:",
+                "systemInstruction": "Your role is to create personalized job alerts based on specific keywords that reflect your skills and interests. Enter terms related to your field, such as programming languages, design software, or industry-specific phrases. This tool ensures you receive timely job notifications that match your expertise, helping you discover the best freelance opportunities effortlessly."
+            },
+            {
+                "toolIcon": "FreelancingTipsIcon",
+                "toolTitle": "Freelancing Tips",
+                "toolSubtitle": "Master the art of freelancing and achieve success.",
+                "placeholderQuestion": "Search for freelancing tips or expert advice.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Share valuable freelancing tips for the following context:",
+                "systemInstruction": "Your mission is to provide insightful and practical advice to help freelancers thrive. Offer guidance on building a strong network, attracting clients, managing projects efficiently, and maintaining a healthy work-life balance. Ensure the tips are actionable, empowering freelancers to navigate their journey with confidence and success."
+            },
+            {
+                "toolIcon": "ClearExpectationsIcon",
+                "toolTitle": "Clear Expectations",
+                "toolSubtitle": "Set clear goals to achieve better results.",
+                "placeholderQuestion": "Search for tips on setting clear expectations.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Share practical tips for setting clear expectations based on the following goals:",
+                "systemInstruction": "Your role is to assist users in defining realistic and well-structured goals. Provide guidance on effective communication, setting measurable objectives, and tracking progress to ensure accountability and success. Offer actionable insights to help users stay focused and achieve their desired outcomes efficiently."
+            },
+            {
+                "toolIcon": "PaymentSystemsIcon",
+                "toolTitle": "Payment Systems",
+                "toolSubtitle": "Streamline and safeguard your transactions effortlessly.",
+                "placeholderQuestion": "Search for payment system options or setup guides.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Suggest secure and efficient payment systems based on the following requirements:",
+                "systemInstruction": "Your mission is to recommend reliable and secure payment solutions tailored to specific needs. Provide insights on system setup, transaction fees, and key features to ensure smooth and hassle-free financial transactions. Focus on security, ease of use, and suitability for different business models."
+            }
+        ]
+    },
+    {
+        "category": "Home Improvement",
+        "subcategories": [
+            {
+                "toolIcon": "DIYProjectsIcon",
+                "toolTitle": "DIY Projects",
+                "toolSubtitle": "Unleash creativity with exciting DIY project ideas.",
+                "placeholderQuestion": "Enter your interests to explore DIY projects.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Suggest engaging and imaginative DIY projects based on the following interests:",
+                "systemInstruction": "Your goal is to suggest engaging and artistic DIY projects that align with the user’s preferences. Provide a list of necessary supplies, clear step-by-step directions, and creative enhancements to make each project exciting and fulfilling. Encourage originality and hands-on learning."
+            },
+            {
+                "toolIcon": "RoomMakeoverIdeasIcon",
+                "toolTitle": "Room Makeover Ideas",
+                "toolSubtitle": "Find fresh and inspiring ways to revamp your space.",
+                "placeholderQuestion": "Share your style preferences for personalized room makeover tips.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Offer stylish and practical room makeover ideas based on these preferences:",
+                "systemInstruction": "Your mission is to suggest innovative and functional room makeover concepts. Include theme recommendations, furniture arrangement tips, and decor suggestions to create a personalized and visually appealing space. Focus on both aesthetics and practicality for a balanced transformation."
+            },
+            {
+                "toolIcon": "LightingSolutionsIcon",
+                "toolTitle": "Lighting Solutions",
+                "toolSubtitle": "Discover creative lighting ideas to enhance any space",
+                "placeholderQuestion": "Provide your room details to get tailored lighting suggestions.",
+                "actionButtonText": "Generate",
+                "toolPrompt": " Recommend the best lighting solutions based on the following room details:",
+                "systemInstruction": "Your role is to offer well-suited and stylish lighting options that complement the given space. Include different types of lighting, optimal placement strategies, and design tips to create the perfect ambiance while ensuring functionality and aesthetic appeal."
+            },
+            {
+                "toolIcon": "KitchenUpgradesIcon",
+                "toolTitle": "Kitchen Upgrades",
+                "toolSubtitle": "Explore innovative and stylish ways to upgrade your kitchen.",
+                "placeholderQuestion": "Share details to receive personalized kitchen improvement ideas.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Offer creative and functional kitchen upgrade ideas based on these details:",
+                "systemInstruction": "Provide creative and efficient kitchen improvement suggestions. Include recommendations for modern appliances, optimized layouts, and decorative elements to enhance both functionality and aesthetics."
+            }
+        ]
+    },
+    {
+        "category": "Language Learning",
+        "subcategories": [
+            {
+                "toolIcon": "LanguageSelectorIcon",
+                "toolTitle": "Language Selector",
+                "toolSubtitle": " Select the language that suits you best.",
+                "placeholderQuestion": "Search for or pick a language.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Recommend useful learning resources for the following language:",
+                "systemInstruction": "Provide helpful resources and guidance to assist users in choosing and learning their desired language. Include beginner-friendly materials, structured courses, and practical tips for an effective learning experience."
+            },
+            {
+                "toolIcon": "IELTSTipsIcon",
+                "toolTitle": "IELTS Tips",
+                "toolSubtitle": "Receive customized guidance for IELTS success.",
+                "placeholderQuestion": "Enter your target band to begin your preparation.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Share effective IELTS preparation tips for reaching the following target band:",
+                "systemInstruction": "Provide tailored strategies, valuable resources, and structured study plans to help users achieve their desired IELTS score. Focus on key skills like listening, reading, writing, and speaking while offering practical test-taking techniques."
+            },
+            {
+                "toolIcon": "VocabularyPracticeIcon",
+                "toolTitle": "Vocabulary Practice",
+                "toolSubtitle": "Expand your vocabulary with focused exercises.",
+                "placeholderQuestion": "Enter a topic to improve your vocabulary skills.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Generate vocabulary practice exercises based on the following topic:",
+                "systemInstruction": "Offer engaging word practice activities that introduce definitions, alternative word choices, and contextual examples. Ensure the exercises encourage better understanding and retention of new vocabulary in an interactive and effective manner."
+            },
+            {
+                "toolIcon": "InteractiveQuizzesIcon",
+                "toolTitle": "Interactive Quizzes",
+                "toolSubtitle": "Design and play exciting, interactive quizzes.",
+                "placeholderQuestion": "Enter a topic to create a quiz.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Develop an interactive quiz based on the following topic:",
+                "systemInstruction": "Provide an entertaining and educational quiz featuring multiple-choice or true/false questions related to the given subject. Ensure the questions are thought-provoking and enjoyable, making the learning experience both fun and informative."
+            }
+        ]
+    },
+    {
+        "category": "Technology",
+        "subcategories": [
+            {
+                "toolIcon": "GadgetRecommendations",
+                "toolTitle": "Gadget Recommendations",
+                "toolSubtitle": "Discover the best gadgets suited to your needs.",
+                "placeholderQuestion": "Enter your interests to explore gadget suggestions.",
+                "actionButtonText": "Recommend",
+                "toolPrompt": "Recommend gadgets based on the following interests:",
+                "systemInstruction": "Suggest gadgets that align with the user’s preferences, providing a short description of each device along with its key advantages. Ensure the recommendations are useful, innovative, and enhance the user’s experience in their areas of interest."
+            },
+            {
+                "toolIcon": "TechTroubleshootingIcon",
+                "toolTitle": "Tech Trouble shooting",
+                "toolSubtitle": " Get instant fixes for your tech problems.",
+                "placeholderQuestion": "Enter problem details to find a solution.",
+                "actionButtonText": "Find",
+                "toolPrompt": "Provide troubleshooting steps for the following issue:",
+                "systemInstruction": "Analyze the given tech problem and suggest effective solutions. Include clear step-by-step guidance along with preventive measures to avoid similar issues in the future. Ensure the instructions are easy to follow and practical."
+            },
+            {
+                "toolIcon": "AnimationIcon",
+                "toolTitle": "Animation",
+                "toolSubtitle": "Unlock smart text generation for animated content.",
+                "placeholderQuestion": "What product do you want to showcase?",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Generate dynamic text-based animations for the following product:",
+                "systemInstruction": "Craft engaging and visually compelling text animations to highlight a product’s key features, benefits, and unique selling points. Use creative language, attention-grabbing phrases, and visually appealing text structures to enhance the impact of the animation, ensuring it captivates the audience and delivers a clear message."
+            }
+        ]
+    },
+    {
+        "category": "Travel",
+        "subcategories": [
+            {
+                "toolIcon": "TravelDestinationIdeasIcon",
+                "toolTitle": "Travel Destination Ideas",
+                "toolSubtitle": "Uncover incredible places for your next adventure.",
+                "placeholderQuestion": "Share your preferences to explore ideal travel spots.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Suggest captivating travel locations based on these preferences:",
+                "systemInstruction": "Offer destination ideas that perfectly match the user’s interests, showcasing major landmarks, cultural experiences, and unique attractions. Ensure the recommendations provide a blend of exploration, relaxation, and adventure to create an unforgettable journey."
+            },
+            {
+                "toolIcon": "PackingChecklistIcon",
+                "toolTitle": "Packing Checklist",
+                "toolSubtitle": " Build a personalized packing list for any trip.",
+                "placeholderQuestion": "Provide trip details to create a tailored checklist.",
+                "actionButtonText": "Create",
+                "toolPrompt": "Generate a comprehensive packing checklist based on these trip details:",
+                "systemInstruction": "Create a well-organized packing list customized to the user’s travel needs. Include must-have essentials along with optional items based on the destination, duration, and activities planned, ensuring a stress-free and well-prepared journey."
+            },
+            {
+                "toolIcon": "TravelDestinationIcon",
+                "toolTitle": "Travel Destination",
+                "toolSubtitle": "Discover your ideal getaway spot.",
+                "placeholderQuestion": " Enter your preferences to uncover amazing places.",
+                "actionButtonText": "Suggest",
+                "toolPrompt": "Suggest a travel location based on the following preferences:",
+                "systemInstruction": " Provide a well-matched destination recommendation with a concise description and key reasons why it’s a great fit. Highlight must-see attractions, cultural highlights, and exciting activities to make the journey memorable."
+            },
+            {
+                "toolIcon": "FlightBookingAssistanceIcon",
+                "toolTitle": "Flight Booking Assistance",
+                "toolSubtitle": "Simplify your flight booking process with expert guidance.",
+                "placeholderQuestion": "Provide travel details to explore flight options.",
+                "actionButtonText": "Recommend",
+                "toolPrompt": "Recommend suitable flight booking options based on these travel details:",
+                "systemInstruction": "Offer tailored flight suggestions, including available airlines, optimal departure times, and useful booking strategies. Ensure recommendations focus on convenience, affordability, and a smooth travel experience."
+            },
+            {
+                "toolIcon": "WildlifeToursIcon",
+                "toolTitle": "Wildlife Tours",
+                "toolSubtitle": "Discover breathtaking wildlife experiences on expert-led tours.",
+                "placeholderQuestion": "Provide your destination to explore wildlife adventures.",
+                "actionButtonText": "Recommend",
+                "toolPrompt": "Recommend exciting wildlife tours for the following location:",
+                "systemInstruction": "Suggest immersive guided wildlife excursions, highlighting notable animal species, reputable tour providers, and unique experiences. Ensure the recommendations offer an unforgettable encounter with nature."
+            },
+            {
+                "toolIcon": "RoadSafetyTipsIcon",
+                "toolTitle": "Road Safety Tips",
+                "toolSubtitle": "Discover key strategies for safe and responsible travel.",
+                "placeholderQuestion": "Enter your query to receive road safety guidance.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Share important road safety recommendations based on these details:",
+                "systemInstruction": "Provide useful and actionable safety tips tailored to the user’s travel needs. Include guidance on responsible driving, pedestrian awareness, and emergency preparedness to ensure a secure and smooth journey."
+            }
+        ]
+    },
+    {
+        "category": "Personal",
+        "subcategories": [
+            {
+                "toolIcon": "BirthdayIcon",
+                "toolTitle": "Birthday",
+                "toolSubtitle": "Craft meaningful and personalized birthday wishes.",
+                "placeholderQuestion": "Provide details to generate a special birthday message.",
+                "actionButtonText": "Compose",
+                "toolPrompt": "Compose a heartfelt birthday message using the following details:",
+                "systemInstruction": "Create a warm and customized birthday message that reflects the given details. Ensure the message is sincere, celebratory, and suited to the occasion, making it a memorable and touching gesture."
+            },
+            {
+                "toolIcon": "ApologyIcon",
+                "toolTitle": "Apology",
+                "toolSubtitle": "Convey heartfelt and meaningful apologies.",
+                "placeholderQuestion": "Provide details to create a sincere apology.",
+                "actionButtonText": "Compose",
+                "toolPrompt": "Compose a genuine apology message using the following details:",
+                "systemInstruction": "Write a sincere and compassionate apology that reflects the given context. Ensure the message is clear, empathetic, and acknowledges the situation appropriately, fostering understanding and reconciliation."
+            },
+            {
+                "toolIcon": "InvitationIcon",
+                "toolTitle": "Invitation",
+                "toolSubtitle": " Design thoughtful and engaging invitations.",
+                "placeholderQuestion": "Provide details to generate a personalized invitation.",
+                "actionButtonText": "Write",
+                "toolPrompt": "Create a welcoming and stylish invitation for the following occasion:",
+                "systemInstruction": "Write a creative and engaging invitation tailored to the event details. Ensure the tone aligns with the occasion, making the message warm, inviting, and suited to the celebration."
+            },
+            {
+                "toolIcon": "SpeechIcon",
+                "toolTitle": "Speech",
+                "toolSubtitle": "Deliver powerful and unforgettable speeches.",
+                "placeholderQuestion": "Provide details to craft a compelling speech.",
+                "actionButtonText": "Compose",
+                "toolPrompt": "Compose a meaningful and well-structured speech using the following details:",
+                "systemInstruction": "Develop a persuasive and engaging speech that aligns with the provided information. Structure it with a strong introduction, key talking points, and a memorable conclusion to leave a lasting impression on the audience."
+            }
+        ]
+    },
+    {
+        "category": "Dream Interpreter",
+        "subcategories": [
+            {
+                "toolIcon": "DreamsIcon",
+                "toolTitle": "Dreams",
+                "toolSubtitle": " Uncover the hidden messages within your dreams.",
+                "placeholderQuestion": "Share dream details to reveal its meaning.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Analyze and explain the meaning of the following dream:",
+                "systemInstruction": "Examine the details of the dream and provide a thoughtful interpretation. Focus on significant symbols, emotions, and underlying themes to offer meaningful insights and a deeper understanding of its possible significance."
+            },
+            {
+                "toolIcon": "LucidDreamingTipsIcon",
+                "toolTitle": "Lucid Dreaming Tips",
+                "toolSubtitle": "Unlock powerful techniques for mastering lucid dreams.",
+                "placeholderQuestion": "Share your goals to enhance your lucid dreaming skills.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Offer lucid dreaming techniques based on the following goals:",
+                "systemInstruction": "Provide practical and effective methods to help achieve lucid dreaming. Include preparation strategies, awareness exercises, and dream control techniques to enhance the experience and improve mastery over dreams."
+            },
+            {
+                "toolIcon": "PersonalConnectionsIcon",
+                "toolTitle": "Personal Connections",
+                "toolSubtitle": "Strengthen and deepen your personal relationships.",
+                "placeholderQuestion": "Share a relationship to receive connection-building tips.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Provide insightful tips to improve the following relationship:",
+                "systemInstruction": "Offer thoughtful and practical advice to enhance personal connections. Emphasize effective communication, emotional understanding, and empathy to build stronger, more fulfilling relationships."
+            },
+            {
+                "toolIcon": "ImprovingDreamRecallIcon",
+                "toolTitle": "Improving Dream Recall",
+                "toolSubtitle": "Develop powerful techniques to remember your dreams vividly.",
+                "placeholderQuestion": "Share your habits to boost dream recall.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Recommend effective methods to enhance dream recall based on the following habits:",
+                "systemInstruction": "Provide actionable strategies to strengthen dream recall, including pre-sleep preparation, mindfulness techniques, and post-sleep reflection. Focus on improving awareness and retention for a clearer and more detailed memory of dreams."
+            }
+        ]
+    },
+    {
+        "category": "Travel",
+        "subcategories": [
+            {
+                "toolIcon": "GainMusclesIcon",
+                "toolTitle": "Gain Muscles",
+                "toolSubtitle": "Build a customized strategy for optimal muscle growth.",
+                "placeholderQuestion": "Enter your goals to generate a tailored muscle gain plan.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Develop a structured muscle gain plan based on the following goals:",
+                "systemInstruction": "Provide a well-balanced and personalized approach to muscle growth. Include targeted workout routines, nutritional guidance, and recovery strategies to maximize strength and development effectively."
+            },
+            {
+                "toolIcon": "CalorieBurnIcon",
+                "toolTitle": "Calorie Burn",
+                "toolSubtitle": "Design a workout plan to optimize calorie burning.",
+                "placeholderQuestion": "Enter an activity to determine calorie expenditure.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Estimate the calorie burn for the following activity:",
+                "systemInstruction": "Provide an accurate calculation of calorie expenditure based on the given activity. Factor in duration and intensity levels to offer a more precise estimate, helping users optimize their workouts for maximum effectiveness."
+            },
+            {
+                "toolIcon": "FitnessIcon",
+                "toolTitle": "Fitness",
+                "toolSubtitle": " Develop a customized fitness strategy to reach your goals.",
+                "placeholderQuestion": "Share your goals to generate a tailored workout plan.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Design a comprehensive fitness plan based on the following goals:",
+                "systemInstruction": "Craft an individualized exercise plan that incorporates effective workout routines, strength-building activities, and methods for tracking progress. Ensure the plan is adaptable, goal-driven, and promotes long-term fitness success."
+            },
+            {
+                "toolIcon": "MeditationIdeasIcon",
+                "toolTitle": "Meditation Ideas",
+                "toolSubtitle": "Find peaceful and effective meditation techniques.",
+                "placeholderQuestion": "Enter your preferences to receive meditation suggestions.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Recommend meditation exercises based on the following preferences:",
+                "systemInstruction": "Offer calming and beneficial meditation approaches that suit the provided preferences. Focus on enhancing relaxation, mindfulness, and inner balance."
+            }
+        ]
+    },
+    {
+        "category": "Entertainment",
+        "subcategories": [
+            {
+                "toolIcon": "MoviesToEmojiIcon",
+                "toolTitle": "Movies To Emoji",
+                "toolSubtitle": "Transform movie titles into creative emoji sequences.",
+                "placeholderQuestion": "Enter a movie title to generate its emoji version.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Create a fun and recognizable emoji representation for the following movie title:",
+                "systemInstruction": "Generate a unique and easily identifiable emoji sequence that creatively represents the given movie title. Ensure the emojis capture key themes, characters, or iconic elements from the film."
+            },
+            {
+                "toolIcon": "JokeIcon",
+                "toolTitle": "Joke",
+                "toolSubtitle": "Create a humorous and entertaining joke for any moment.",
+                "placeholderQuestion": "Enter a topic to generate a funny joke.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Come up with a witty joke based on the following topic:",
+                "systemInstruction": "Create a playful and amusing joke that matches the provided topic. Ensure it is engaging, lighthearted, and delivers a fun punchline."
+            },
+            {
+                "toolIcon": "StandupComedyIcon",
+                "toolTitle": "Standup Comedy",
+                "toolSubtitle": "Craft witty and entertaining stand-up comedy material.",
+                "placeholderQuestion": "Enter a topic to generate a comedic routine.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Create a hilarious stand-up comedy routine based on the following topic:",
+                "systemInstruction": "Develop a fun and engaging comedy set that includes sharp punchlines, relatable humor, and clever observations. Ensure the routine flows naturally, keeping the audience entertained and laughing."
+            },
+            {
+                "toolIcon": "CreateFunnyConversationIcon",
+                "toolTitle": "Create Funny Conversation",
+                "toolSubtitle": "Spark laughter with engaging and comedic dialogues.",
+                "placeholderQuestion": "Enter topics to generate a fun and amusing conversation.",
+                "actionButtonText": "Write",
+                "toolPrompt": "Craft a funny and entertaining conversation based on these topics:",
+                "systemInstruction": "Write a clever and relatable dialogue filled with humor. Ensure the conversation is engaging, flows naturally, and delivers witty punchlines for a fun and enjoyable exchange."
+            }
+        ]
+    },
+    {
+        "category": "Financial",
+        "subcategories": [
+            {
+                "toolIcon": "InvestmentsIcon",
+                "toolTitle": "Investments",
+                "toolSubtitle": "Build wealth with smart financial strategies.",
+                "placeholderQuestion": "What financial topic do you need guidance on?",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Provide insights on the following financial topic:",
+                "systemInstruction": "Offer well-researched advice and recommendations on financial matters, including investment strategies, savings plans, and long-term wealth-building techniques. Tailor your guidance based on the user's financial goals and current situation, ensuring they make informed decisions for a secure and prosperous future. Provide actionable insights on opportunities, risk management, and financial growth strategies."
+            },
+            {
+                "toolIcon": "FinancialPlanningIcon",
+                "toolTitle": "Financial Planning",
+                "toolSubtitle": "Take control of your finances for long-term stability.",
+                "placeholderQuestion": "Which area of financial planning do you need help with?",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Provide insights on the following financial planning aspect:",
+                "systemInstruction": "Guide users in effectively managing their finances to ensure long-term security. Offer tailored advice on budgeting, savings, retirement planning, debt reduction, and wealth-building strategies. Help users define their financial goals and provide actionable steps to achieve stability and financial independence. Empower them with the knowledge and tools to make smart, future-focused financial decisions."
+            },
+            {
+                "toolIcon": "TaxPlanningIcon",
+                "toolTitle": "Tax Planning",
+                "toolSubtitle": " Maximize tax savings with smart financial strategies.",
+                "placeholderQuestion": "What tax-related topic do you need guidance on?",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Provide guidance on the following tax-related matter:",
+                "systemInstruction": "Offer strategic tax planning advice to help users minimize liabilities and maximize deductions. Provide insights on tax-saving opportunities, credits, and legal strategies for both personal and business finances. Ensure compliance with relevant tax regulations while helping users make informed financial decisions that optimize their tax position and reduce unnecessary expenses."
+            },
+            {
+                "toolIcon": "RetirementPlanningIcon",
+                "toolTitle": "Retirement Planning",
+                "toolSubtitle": "Plan for a secure and worry-free retirement.",
+                "placeholderQuestion": "Which aspect of retirement planning do you need help with?",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Offer insights on the following retirement planning topic:",
+                "systemInstruction": "Provide personalized strategies to help users build a financially secure retirement. Offer advice on savings plans, investment options, pension management, and income distribution strategies. Assist users in setting realistic retirement goals and making informed financial decisions to ensure long-term stability and comfort during their retirement years."
+            },
+            {
+                "toolIcon": "InsuranceAdviceIcon",
+                "toolTitle": "Insurance Advice",
+                "toolSubtitle": "Find the perfect insurance coverage for security and peace of mind.",
+                "placeholderQuestion": "What aspect of insurance do you need guidance on?",
+                "actionButtonText": "Generate",
+                "toolPrompt": " Provide insights on the following insurance-related concern:",
+                "systemInstruction": "Offer expert recommendations to help users navigate their insurance options. Provide guidance on selecting the most suitable policies, understanding coverage benefits, and evaluating providers for health, life, auto, or home insurance. Ensure users make informed choices that safeguard their assets and provide long-term financial protection."
+            },
+            {
+                "toolIcon": "EstatePlanningIcon",
+                "toolTitle": "Estate Planning",
+                "toolSubtitle": "Protect your assets and plan your estate wisely.",
+                "placeholderQuestion": "What estate planning aspect do you need guidance on?",
+                "actionButtonText": "Generate",
+                "toolPrompt": " Provide expert recommendations on the following estate planning concern:",
+                "systemInstruction": " Provide strategic guidance on estate management, including wills, trusts, inheritance planning, and asset protection. Help users develop a comprehensive plan to safeguard their wealth, ensure a seamless transfer of assets, and create financial security for future generations. Assist them in making informed choices that align with their long-term goals and legal considerations."
+            },
+            {
+                "toolIcon": "CreditScoreAdviceIcon",
+                "toolTitle": "Credit Score Advice",
+                "toolSubtitle": " Strengthen and maintain a healthy credit profile.",
+                "placeholderQuestion": "What credit score concern do you need help with?",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Provide expert recommendations on the following credit score concern:",
+                "systemInstruction": " Offer practical strategies to help users improve and sustain a strong credit score. Provide insights on responsible credit use, debt management, and understanding credit reports. Assist users in making informed financial decisions that enhance their creditworthiness and long-term financial stability."
+            },
+            {
+                "toolIcon": "InvestmentPortfolioIcon",
+                "toolTitle": "Investment Portfolio",
+                "toolSubtitle": "Optimize and grow your investment portfolio wisely.",
+                "placeholderQuestion": "What aspect of portfolio management do you need help with?",
+                "actionButtonText": "Generate",
+                "toolPrompt": " Provide expert insights on the following investment portfolio concern:",
+                "systemInstruction": "Offer strategic guidance on portfolio diversification, asset allocation, and risk management to maximize financial growth. Tailor recommendations based on the user’s investment goals, risk tolerance, and financial objectives. Help users make well-informed decisions to build a resilient and profitable investment portfolio."
+            },
+            {
+                "toolIcon": "InvestmentIdeasIcon",
+                "toolTitle": "Investment Ideas",
+                "toolSubtitle": "Discover investment opportunities tailored to your goals.",
+                "placeholderQuestion": "Choose your investment goals or preferences for personalized recommendations.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Get customized investment suggestions based on your financial goals and risk tolerance:",
+                "systemInstruction": "Provide well-researched investment recommendations that align with users' financial objectives, risk appetite, and time horizon. Suggest suitable asset classes, investment strategies, and growth opportunities, whether they seek long-term wealth accumulation, passive income, or capital preservation. Help users make informed decisions to optimize their investments and achieve financial success."
+            }
+        ]
+    },
+    {
+        "category": "Industry",
+        "subcategories": [
+            {
+                "toolIcon": "CreatePitchDeckIcon",
+                "toolTitle": "Create Pitch Deck",
+                "toolSubtitle": "Craft a compelling pitch to attract potential investors.",
+                "placeholderQuestion": "Share details about your business and product to create your pitch deck.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Generate a persuasive pitch deck for your business and product:",
+                "systemInstruction": "reate a visually appealing and persuasive pitch deck that effectively showcases your business and product. Include key information about your business, such as its mission, vision, and unique value propositions. Highlight your product or service, its features, the problem it solves, and your target market. Customize the content to include relevant sections, such as market analysis, competition, revenue projections, and team members. The objective is to present a compelling story that will resonate with potential investors and partners."
+            },
+            {
+                "toolIcon": "ProductLaunchIcon",
+                "toolTitle": "Product Launch",
+                "toolSubtitle": "Craft an engaging pitch for your upcoming product launch.",
+                "placeholderQuestion": "Provide details about your upcoming product to create a compelling pitch.",
+                "actionButtonText": "Generate",
+                "toolPrompt": " Create a persuasive pitch for your upcoming product launch:",
+                "systemInstruction": "Develop a captivating pitch that showcases your product's unique features, target market, and the problem it solves. Include your launch strategy, marketing approach, and distribution plans. Emphasize your product’s value proposition and competitive edge. Customize the pitch to engage potential investors, partners, and customers, generating excitement and support for the product’s successful launch."
+            },
+            {
+                "toolIcon": "CompanyTaglinesIcon",
+                "toolTitle": "Company Taglines",
+                "toolSubtitle": "Create impactful and memorable company slogans.",
+                "placeholderQuestion": "Share details about your company and its core values.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Generate memorable tagline ideas for your company:",
+                "systemInstruction": "Develop catchy and meaningful taglines that reflect your company’s mission, values, and key offerings. Describe your brand’s essence and what distinguishes it from competitors. If desired, provide keywords or themes to incorporate into the taglines. Use these ideas to create a slogan that captures your company’s identity and resonates with your target audience."
+            },
+            {
+                "toolIcon": "VisionMissionIcon",
+                "toolTitle": "Vision Mission",
+                "toolSubtitle": "Craft a powerful vision and mission to guide your company.",
+                "placeholderQuestion": "Share details about your company's vision and mission.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Define your company's core objectives and mission:",
+                "systemInstruction": "Your task is to create clear, inspiring vision and mission statements for your company. Provide insights into your company's values, goals, and desired impact. These statements should reflect your company’s purpose, guiding its future direction and motivating your team and stakeholders. Tailor them to convey the essence of what your company stands for and aims to achieve."
+            },
+            {
+                "toolIcon": "CreateUserStoriesIcon",
+                "toolTitle": "Create User Stories",
+                "toolSubtitle": "Generate user-centric stories for your project development.",
+                "placeholderQuestion": "Provide details about your project and its objectives.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Create user stories from a user's point of view for your project:",
+                "systemInstruction": "Your role is to craft user stories that capture a user’s perspective for your project. Include details about the project’s goals, features, and functionalities. Describe different user roles and their interactions with the system. Each user story should focus on a specific task or action a user needs to complete. Use this method to outline user needs and scenarios that will guide both development and testing processes."
+            },
+            {
+                "toolIcon": "TermsOfUseIcon",
+                "toolTitle": "Terms Of Use",
+                "toolSubtitle": " Draft clear and effective terms of use for your service or website.",
+                "placeholderQuestion": "Share details about your service or website and its policies.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Generate clear terms of use for your service or website:",
+                "systemInstruction": " Your task is to create well-structured and easy-to-understand terms of use for your service or website. Provide details about your service’s functionality, features, and any important policies. Outline the user's rights and obligations, including any privacy and legal disclaimers. These terms should ensure clarity, protect both your business and users, and promote a seamless and secure experience."
+            },
+            {
+                "toolIcon": "PrivacyPolicyIcon",
+                "toolTitle": "Privacy Policy",
+                "toolSubtitle": "Create a clear and detailed privacy policy for your company.",
+                "placeholderQuestion": "Provide details about how your company handles user data.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Draft a comprehensive privacy policy for your company:",
+                "systemInstruction": " Your task is to create a thorough privacy policy that outlines how your company collects, stores, and uses user data. Include information on the types of data gathered, the purposes for which it is used, and how it is protected. Make sure the policy complies with relevant data protection laws and regulations. This privacy policy should promote transparency, build trust with users, and demonstrate your commitment to safeguarding their personal information."
+            }
+        ]
+    },
+    {
+        "category": "Professional",
+        "subcategories": [
+            {
+                "toolIcon": "SampleLegalDocsIcon",
+                "toolTitle": "Sample Legal Docs",
+                "toolSubtitle": " Draft professional and legally sound documents effortlessly.",
+                "placeholderQuestion": "Choose the type of legal document you need.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Create a sample legal document for the following type:",
+                "systemInstruction": "Your task is to create a sample legal document tailored to the specified type (such as contract, agreement, or disclaimer). Ensure the document adheres to legal standards, is clear, and follows proper formatting. You can adjust the content with relevant details as needed. This tool is designed to help professionals efficiently generate legally compliant documents."
+            },
+            {
+                "toolIcon": "WebDesignIcon",
+                "toolTitle": "Web Design",
+                "toolSubtitle": "Provide expert advice on crafting effective and visually appealing websites.",
+                "placeholderQuestion": "What specific web design area would you like guidance on?",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Offer expert advice on the following aspect of web design:",
+                "systemInstruction": "Your role is to provide expert advice on the chosen area of web design. Whether it’s UI/UX design, responsive design, or any other aspect, share valuable insights and best practices to help professionals create functional, user-friendly websites. Your guidance should empower users to improve their design skills and build websites that are both engaging and meet current web standards."
+            },
+            {
+                "toolIcon": "ProductDocumentIcon",
+                "toolTitle": "Product Document",
+                "toolSubtitle": "Generate clear and concise manuals for effective product usage.",
+                "placeholderQuestion": "Enter the product name for which you need a usage manual.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Write a usage manual for the following product:",
+                "systemInstruction": "Generate a straightforward and well-structured usage manual for the specified product. The manual should provide step-by-step instructions to help users operate the product efficiently. Use clear language, avoid unnecessary complexity, and incorporate illustrations or diagrams if they enhance understanding. Ensure that the manual is practical, user-friendly, and helps customers maximize the product’s potential."
+            },
+            {
+                "toolIcon": "ITSolutionsIcon",
+                "toolTitle": "IT Solutions",
+                "toolSubtitle": "Identify and fix computer issues efficiently.",
+                "placeholderQuestion": "Enter the computer issue you need help with.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Enter the computer issue you need help with.",
+                "systemInstruction": "Diagnose the specified computer issue and provide clear, step-by-step solutions. Your response should include troubleshooting methods, possible causes, and recommended software or hardware fixes. Ensure the solutions are easy to follow, even for non-technical users, and aim for an effective resolution."
+            },
+            {
+                "toolIcon": "WorkplaceLettersIcon",
+                "toolTitle": "Workplace Letters",
+                "toolSubtitle": "Create professional and effective business letters.",
+                "placeholderQuestion": "Enter the type of business letter you need.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Write a professional business letter for the following purpose:",
+                "systemInstruction": "Compose a well-structured and impactful business letter tailored to the specified type (e.g., cover letter, recommendation letter, resignation letter). Follow the appropriate format, tone, and structure for business correspondence. Ensure clarity, professionalism, and relevance to the intended recipient. Customize the content with specific details as needed to enhance effectiveness."
+            },
+            {
+                "toolIcon": "StaffPolicesIcon",
+                "toolTitle": "Staff Polices",
+                "toolSubtitle": "Create structured and effective staff policies and protocols.",
+                "placeholderQuestion": "Enter the type of staff policy or protocol to create.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Develop a structured policy and protocol for the following staff policy type:",
+                "systemInstruction": "Create a clear and comprehensive policy for the specified type of staff policy (e.g., employee handbook, code of conduct, remote work policy). Ensure the policy is well-structured, easy to understand, and aligned with legal and organizational requirements. Provide actionable steps for implementation and enforcement to maintain workplace standards and compliance."
+            },
+            {
+                "toolIcon": "OfferLetterIcon",
+                "toolTitle": "Offer Letter",
+                "toolSubtitle": "Streamline the creation of professional job offer letters.",
+                "placeholderQuestion": "Enter the details for the job offer letter.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Create a job offer letter for the following position:",
+                "systemInstruction": "Generate a professional and well-structured job offer letter for the specified position. Include key details such as job title, salary, start date, and any relevant terms or conditions. Ensure clarity, professionalism, and compliance with legal and company policies. Customize the content as needed to align with the employer’s requirements."
+            } 
+        ]
+    },
+    {
+        "category": "Gaming",
+        "subcategories": [
+            {
+                "toolIcon": "BuildAIGamesIcon",
+                "toolTitle": "Build AI Games",
+                "toolSubtitle": "Build immersive AI-powered gaming experiences.",
+                "placeholderQuestion": "Enter details to get AI game development tips.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Provide expert tips for developing AI-powered games based on the following details:",
+                "systemInstruction": "Guide users in building AI-powered games by offering insights on tools, frameworks, and best practices. Provide recommendations on AI integration, game mechanics, and optimization techniques to enhance gameplay and player engagement. Ensure that the advice is practical, up-to-date, and suited for various game development platforms"
+            },
+            {
+                "toolIcon": "MobileGamesIcon",
+                "toolTitle": "Mobile Games",
+                "toolSubtitle": "Create captivating and immersive mobile games.",
+                "placeholderQuestion": "Enter concepts to get mobile game development tips.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Provide expert tips for designing mobile games based on the following concepts:",
+                "systemInstruction": "Offer insights and best practices for developing engaging mobile games. Provide recommendations on UI/UX design, monetization strategies, gameplay mechanics, and performance optimization. Ensure that the tips are practical, industry-relevant, and adaptable for different game genres and platforms."
+            },
+            {
+                "toolIcon": "ReinstallOSIcon",
+                "toolTitle": "Reinstall OS",
+                "toolSubtitle": "Perform a clean OS reinstallation with ease.",
+                "placeholderQuestion": "Enter the operating system to reinstall.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Provide detailed step-by-step instructions for reinstalling the following operating system:",
+                "systemInstruction": "Guide users through the OS reinstallation process with clear, step-by-step instructions. Include essential safety tips, data backup procedures, and troubleshooting advice to prevent errors. Ensure the instructions are easy to follow, covering both standard and advanced installation options where applicable."
+            },
+            {
+                "toolIcon": "VideoGamesIcon",
+                "toolTitle": "Video Games",
+                "toolSubtitle": "Discover exciting games tailored to your preferences.",
+                "placeholderQuestion": "Enter your preferences to get video game recommendations.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Suggest video games based on the following user preferences:",
+                "systemInstruction": "Provide personalized video game recommendations based on the user's specified preferences. Consider factors such as genre, platform, gameplay style, and unique features. Ensure the recommendations are diverse, covering both popular and hidden gems across different gaming experiences."
+            },
+            {
+                "toolIcon": "ConsoleGamesIcon",
+                "toolTitle": "Console Games",
+                "toolSubtitle": "Discover thrilling console games tailored to you.",
+                "placeholderQuestion": "Enter your preferences to get console game recommendations.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Suggest console games based on the following user preferences.",
+                "systemInstruction": "Provide personalized console game recommendations based on the user's preferences. Include details about gameplay mechanics, supported platforms, multiplayer options, and unique features. Ensure the recommendations cater to different play styles, from action-packed adventures to immersive story-driven experiences."
+            },
+            {
+                "toolIcon": "MultiplayerGamesIcon",
+                "toolTitle": "Multiplayer Games",
+                "toolSubtitle": "Team up or compete in the best multiplayer games.",
+                "placeholderQuestion": "Enter your preferences to get multiplayer game recommendations.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Suggest multiplayer games based on the following user preferences:",
+                "systemInstruction": "Provide personalized multiplayer game recommendations based on the user's preferences. Include details about cooperative and competitive gameplay, platform availability, and key features such as cross-play, ranking systems, or team-based modes. Ensure the suggestions cater to various playstyles, from casual fun to high-level competition."
+            },
+            {
+                "toolIcon": "TextGamesIcon",
+                "toolTitle": "Text Games",
+                "toolSubtitle": "Dive into rich, interactive story-driven adventures.",
+                "placeholderQuestion": "Enter themes to get text-based game ideas.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Suggest text-based games or ideas based on the following themes:",
+                "systemInstruction": "Provide compelling text-based game recommendations or original ideas based on the specified themes. Include narrative-driven options, interactive storytelling elements, and gameplay mechanics such as branching choices, role-playing aspects, or AI-driven dialogue. Ensure the suggestions cater to different genres, from mystery and fantasy to sci-fi and psychological thrillers."
+            }
+        ]
+    },
+    {
+        "category": "Science",
+        "subcategories": [
+            {
+                "toolIcon": "ScientificFactsIcon",
+                "toolTitle": "Scientific Facts",
+                "toolSubtitle": "Explore fascinating and mind-blowing scientific facts.",
+                "placeholderQuestion": "Enter a topic to discover amazing science facts.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Share fascinating scientific facts about the following topic:",
+                "systemInstruction": "Generate captivating and educational science facts based on the given topic. Ensure the facts are accurate, engaging, and easy to understand. Provide insights into scientific discoveries, phenomena, and theories that make learning exciting."
+            },
+            {
+                "toolIcon": "ScienceOlympiadsIcon",
+                "toolTitle": "Science Olympiads",
+                "toolSubtitle":"Master your Science Olympiad with expert preparation.",
+                "placeholderQuestion": "Enter a topic to get Science Olympiad tips.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Provide preparation tips for the following Science Olympiad topic:",
+                "systemInstruction": "Suggest effective study strategies, recommended resources, and practice exercises for the specified Science Olympiad topic. Include tips on conceptual understanding, problem-solving techniques, and time management. Ensure the guidance is structured, practical, and tailored to help students excel in competitive science events."
+            },
+            {
+                "toolIcon": "StudyTipsIcon",
+                "toolTitle": "Study Tips",
+                "toolSubtitle": "Master science with effective study strategies.",
+                "placeholderQuestion": "Enter a topic to get science study tips.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Share study tips for mastering the following science topic:",
+                "systemInstruction": "Provide effective study tips and strategies to help users understand and excel in the specified science topic. Include techniques for concept retention, problem-solving, and practical application. Ensure the advice is clear, actionable, and adaptable for different learning styles."
+            },
+            {
+                "toolIcon": "FunScienceFactsIcon",
+                "toolTitle": "Fun Science Facts",
+                "toolSubtitle": "Uncover fascinating and fun science facts.",
+                "placeholderQuestion": "Enter a topic to discover exciting science facts.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Share fun and exciting science facts about the following topic:",
+                "systemInstruction": "Generate captivating and easy-to-understand science facts that make learning fun. Ensure the facts are engaging, surprising, and spark curiosity. Include interesting discoveries, strange phenomena, or mind-blowing trivia that showcase the wonders of science in an entertaining way."
+            },
+            {
+                "toolIcon": "MicroscopeTechniquesIcon",
+                "toolTitle": "Microscope Techniques",
+                "toolSubtitle": "Master essential techniques for effective microscope use.",
+                "placeholderQuestion": "Enter your query to get microscope tips",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Share effective techniques and tips for using a microscope:",
+                "systemInstruction": "Provide practical and easy-to-follow techniques for using a microscope effectively. Include guidance on proper setup, focusing methods, slide preparation, and observation techniques. Ensure the tips enhance clarity, accuracy, and ease of use, making microscopy accessible for beginners and advanced users alike."
+            },
+            {
+                "toolIcon": "ScientificMethodologyIcon",
+                "toolTitle": "Scientific Methodology",
+                "toolSubtitle": "Explore the key steps of the scientific method.",
+                "placeholderQuestion": "Enter a topic to learn about the scientific method.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Explain how the scientific method applies to the following topic:",
+                "systemInstruction": "Break down the scientific method into clear, easy-to-follow steps related to the given topic. Provide insights into observation, hypothesis development, experimentation, and analysis. Ensure the explanation is practical, engaging, and demonstrates how the scientific method is used in real-world research and discoveries."
+            },
+            {
+                "toolIcon": "BiotechnologyAdvancesIcon",
+                "toolTitle": "Biotechnology Advances",
+                "toolSubtitle": "Uncover fascinating advancements in biotechnology.",
+                "placeholderQuestion": "Enter a topic to explore biotechnology facts.",
+                "actionButtonText": "Generate",
+                "toolPrompt": "Share important advances and facts about biotechnology related to the following topic:",
+                "systemInstruction": "Explain significant breakthroughs and innovations in biotechnology. Highlight key advancements, practical applications, and their impact on various fields such as medicine, agriculture, and environmental science. Ensure the information is clear, engaging, and demonstrates how biotechnology is shaping the future."
+            } 
+        ]
+    }
+]
